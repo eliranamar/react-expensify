@@ -1,0 +1,98 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    "no-unused-vars-rest"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "jasmine": true
+  },
+  "globals": {
+
+    "__DEVELOPMENT__": true,
+    "__PRODUCTION__": true,
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__DEBUG__": true,
+    "__COVERAGE__": true,
+    "__BASENAME__": true,
+    "__INTERNAL_GRAPHQL_URL__": true,
+    "__EXTERNAL_GRAPHQL_URL__": true,
+    "__FACEBOOK_APP_ID__": true,
+    "__FILESTACK_API_KEY__": true,
+    "__DRIFT_API_KEY__": true
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack/webpack.config.js"
+      }
+    }
+  },
+  "rules": {
+    "max-len": [
+      "error",
+      120,
+      {
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreUrls": true
+      }
+    ],
+    "arrow-body-style": [
+      "error",
+      "always"
+    ],
+    "key-spacing": "off",
+    "padded-blocks": "off",
+    "import/no-dynamic-require": 0,
+    "generator-star-spacing": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "ignore"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off",
+    "no-else-return": "off",
+    "no-restricted-syntax": [
+      "error",
+      "WithStatement",
+      "ForInStatement",
+      "BreakStatement",
+      "DebuggerStatement"
+    ],
+    "class-methods-use-this": "off",
+
+    "import/no-extraneous-dependencies": [
+      "off",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.spec.js",
+          "**/*.stories.js"
+        ]
+      }
+    ],
+    "react/prefer-stateless-function": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "jsx-a11y/no-marquee": "off"
+  }
+}
